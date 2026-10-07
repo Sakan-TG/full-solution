@@ -1,0 +1,148 @@
+<title>خطوات استلام الوحدة — سكن</title>
+<style>
+  :root{
+    --bg:#FAF6F1;
+    --surface:#FFFFFF;
+    --surface-2:#F5EFE6;
+    --ink:#2E2224;
+    --ink-soft:#7A6660;
+    --maroon:#6B2737;
+    --maroon-ink:#3D2F2F;
+    --taupe:#B5A49A;
+    --line:#E4D6C8;
+    --line-soft:#EEE4D8;
+    --shadow: 0 18px 40px -22px rgba(107,39,55,.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#241A1B; --surface:#2E2223; --surface-2:#38292A; --ink:#F3EAE3;
+      --ink-soft:#C9B7AE; --maroon:#E48A98; --maroon-ink:#1C1415; --taupe:#C9AE9C;
+      --line:#4A3838; --line-soft:#3A2C2C; --shadow: 0 18px 40px -22px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#241A1B; --surface:#2E2223; --surface-2:#38292A; --ink:#F3EAE3;
+    --ink-soft:#C9B7AE; --maroon:#E48A98; --maroon-ink:#1C1415; --taupe:#C9AE9C;
+    --line:#4A3838; --line-soft:#3A2C2C; --shadow: 0 18px 40px -22px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink); direction:rtl;
+    font-family:'Tajawal','Segoe UI',Tahoma,sans-serif; line-height:1.75; margin:0;
+  }
+  h1,h2,h3{font-family:'Cairo','Tajawal',sans-serif; text-wrap:balance; margin:0;}
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 20px 70px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:.14em;font-weight:700;
+    color:var(--maroon);text-transform:uppercase;
+  }
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--maroon);display:inline-block;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:13px 24px;border-radius:999px;font-weight:700;font-size:14.5px;
+    border:1.5px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:#25D366;color:#0b2b17;}
+  .btn-outline-navy{border-color:var(--maroon);color:var(--maroon);}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink-soft);margin-bottom:26px;}
+  .note{
+    background:var(--surface-2);border:1px solid var(--line);border-radius:16px;
+    padding:18px 20px;margin-bottom:26px;
+  }
+  .note p.label{font-weight:800;font-family:'Cairo',sans-serif;color:var(--maroon);margin-bottom:6px;font-size:14px;}
+  .note p.body{color:var(--ink);font-size:14.5px;}
+  .intro-text{color:var(--ink-soft);font-size:14.5px;margin-bottom:24px;}
+  .steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  @media (max-width:700px){.steps-grid{grid-template-columns:1fr;}}
+  .step-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 22px;}
+  .step-card h3{font-weight:800;font-size:16px;color:var(--maroon);margin-bottom:14px;}
+  .step-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+  .step-card li{font-size:13.5px;color:var(--ink);display:flex;gap:8px;align-items:flex-start;}
+  .step-card li::before{content:"";width:5px;height:5px;border-radius:999px;background:var(--taupe);margin-top:8px;flex:none;}
+  .final-note{
+    background:var(--maroon-ink, var(--maroon));color:#F4EFE3;border-radius:16px;
+    padding:20px 22px;margin-top:10px;margin-bottom:34px;font-size:14.5px;font-weight:600;
+  }
+  footer{padding-top:10px;text-align:center;color:var(--ink-soft);font-size:12.5px;}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+<div dir="rtl" lang="ar" class="wrap">
+
+  <a class="back-link" href="index.html">→ رجوع لصفحة باقة 888</a>
+
+  <span class="eyebrow">مفتاحك همنا</span>
+  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:14px;margin-bottom:14px;">خطوات استلام الوحدة من المطوّر</h1>
+  <p class="intro-text" style="margin-bottom:26px;">دليل مبسّط للخطوات المعتادة اللي بتحصل قبل ما تستلم وحدتك من المطوّر، وقبل ما نقدر نبدأ أي شغل تشطيب فيها.</p>
+
+  <div class="note">
+    <p class="label">ملحوظة مهمة</p>
+    <p class="body">مصاريف ما قبل الاستلام دي كلها خارج نطاق الباقة تمامًا — مش ضمن سعر التشطيب والفرش، وبيتحملها العميل بشكل منفصل مع المطوّر.</p>
+  </div>
+
+  <p class="intro-text">دي الخطوات المعتادة قبل استلام أي وحدة من أي مطوّر — مش خاصة بمشروع معيّن. بنمشي معاك فيها خطوة بخطوة.</p>
+  <div style="height:10px;"></div>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <h3>أولاً: قبل ما تيجي تستلم</h3>
+      <ul>
+        <li>لازم تكون سددت أي أقساط متأخرة عليك للمطوّر.</li>
+        <li>لازم تكون سددت مبلغ تأمين/وديعة الصيانة بالكامل.</li>
+        <li>لو لسه عليك أقساط، لازم تكون سلّمت كل الشيكات المطلوبة.</li>
+      </ul>
+    </div>
+    <div class="step-card">
+      <h3>ثانيًا: مع شركة إدارة المشروع</h3>
+      <ul>
+        <li>سداد رسوم الإشراف الهندسي حسب مساحة الوحدة (بتختلف من مشروع لمشروع).</li>
+        <li>سداد مبلغ تأمين التشطيبات بالكامل — شرط أساسي لاستلام المفتاح وبدء التشطيب.</li>
+        <li>استلام خطاب الاستلام، مع محضر الاستلام وإقرارات الكهرباء والسباكة، وتوقيع على لائحة مخالفات التشطيب.</li>
+      </ul>
+    </div>
+    <div class="step-card">
+      <h3>ثالثًا: في الموقع</h3>
+      <ul>
+        <li>سداد قيمة عداد الكهرباء واستلام الإيصال.</li>
+        <li>سداد عداد المياه والسنترالايت في مكتب خدمة العملاء.</li>
+        <li>الحصول على إفادة سداد وديعة الصيانة.</li>
+        <li>تسليم إيصالات الدفع، واستلام مفتاح الوحدة.</li>
+      </ul>
+    </div>
+    <div class="step-card">
+      <h3>رابعًا: بعد ما نخلّص التشطيب</h3>
+      <ul>
+        <li>بناخد إفادة من الإدارة الهندسية إن مفيش أي تلفيات بسبب شغلنا.</li>
+        <li>إحنا مسؤولين بالكامل عن أي غرامات ناتجة عن التشطيبات اللي بنعملها.</li>
+        <li>لو فيه تلفيات، بنصلّحها ونأخذ إفادة جديدة.</li>
+        <li>مبلغ التأمين يترد بالكامل من غير أي خصم بعد الإفادة النهائية.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="final-note">
+    قبل ما نستلم المفتاح ونبدأ التشطيب، لازم تكون عدادات الكهرباء والمياه والسنترالايت مركّبة ومدفوعة بالكامل.
+  </div>
+
+  <div style="text-align:center;">
+    <a class="btn btn-primary" id="wa-steps" data-msg="السلام عليكم، حابب/ة أعرف تفاصيل أكتر عن خطوات استلام الوحدة" href="#" target="_blank" rel="noopener">عندي سؤال — تواصل واتساب</a>
+  </div>
+
+  <footer>سكن — إحدى شركات مجموعة التركي</footer>
+</div>
+
+<script>
+(function(){
+  var phone = "201040066782";
+  document.querySelectorAll('[data-msg]').forEach(function(el){
+    var msg = el.getAttribute('data-msg') || '';
+    el.setAttribute('href', 'https://wa.me/' + phone + (msg ? ('?text=' + encodeURIComponent(msg)) : ''));
+  });
+})();
+</script>
