@@ -260,6 +260,39 @@
     display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.4);
   }
   .fab svg{width:26px;height:26px;fill:#0b2b17;}
+
+  /* ---------- SALES INFO (internal) ---------- */
+  .sales-link-wrap{text-align:center;margin-top:16px;}
+  .sales-link-btn{
+    background:none;border:none;color:var(--ink-soft);font-size:11.5px;
+    opacity:.55;cursor:pointer;font-family:'Tajawal',sans-serif;padding:6px 10px;
+  }
+  .sales-link-btn:hover{opacity:.9;}
+  .sales-overlay{
+    position:fixed;inset:0;background:rgba(20,12,13,.6);z-index:100;
+    display:flex;align-items:center;justify-content:center;padding:20px;
+  }
+  .sales-overlay[hidden]{display:none;}
+  .sales-modal{
+    background:var(--surface);border-radius:20px;max-width:720px;width:100%;
+    max-height:85vh;overflow-y:auto;padding:32px 28px;position:relative;box-shadow:var(--shadow);
+  }
+  .sales-modal-close{
+    position:absolute;top:14px;inset-inline-end:14px;background:none;border:none;
+    font-size:24px;color:var(--ink-soft);cursor:pointer;line-height:1;
+  }
+  .sales-modal h3{font-family:'Cairo',sans-serif;color:var(--maroon);font-size:19px;margin-bottom:10px;}
+  .sales-modal h4{font-family:'Cairo',sans-serif;color:var(--maroon);font-size:14.5px;margin:18px 0 8px;}
+  .sales-modal p{font-size:14px;color:var(--ink);}
+  #sales-pass-input{
+    width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);
+    font-size:15px;margin:14px 0 10px;font-family:'Tajawal',sans-serif;background:var(--surface);color:var(--ink);
+    box-sizing:border-box;
+  }
+  .sales-table{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:12.5px;}
+  .sales-table th,.sales-table td{border:1px solid var(--line);padding:8px 8px;text-align:center;}
+  .sales-table th{background:var(--surface-2);font-family:'Cairo',sans-serif;font-weight:800;color:var(--maroon);}
+  .sales-note{background:var(--surface-2);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--ink-soft);margin:8px 0 12px;}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -624,11 +657,62 @@
   <footer>
     <div>سكن — SAKAN</div>
     <div class="loc">إحدى شركات مجموعة التركي · تنفيذ وتسليم داخل بورتو جولف</div>
+    <div class="sales-link-wrap">
+      <button type="button" id="sales-info-btn" class="sales-link-btn">🔒 Sales info</button>
+    </div>
   </footer>
 
   <a class="fab" id="wa-fab" data-msg="السلام عليكم، حابب/ة أعرف تفاصيل باقة 888 الكاملة من سكن" href="#" target="_blank" rel="noopener" aria-label="تواصل واتساب">
     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm5.2 14.2c-.22.62-1.28 1.2-1.78 1.27-.46.07-1.03.1-1.66-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.93-2.2.24-.27.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.16 1.34.27.13.42.11.58-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.5.31.07.13.07.71-.15 1.33Z"/></svg>
   </a>
+
+  <div id="sales-modal-overlay" class="sales-overlay" hidden>
+    <div class="sales-modal">
+      <button type="button" id="sales-modal-close" class="sales-modal-close" aria-label="إغلاق">&times;</button>
+
+      <div id="sales-pass-screen">
+        <h3>🔒 Sales info</h3>
+        <p>الصفحة دي لفريق المبيعات بس.</p>
+        <input type="password" id="sales-pass-input" placeholder="الباسورد" autocomplete="off">
+        <button type="button" id="sales-pass-submit" class="btn btn-navy" style="width:100%;">دخول</button>
+        <p id="sales-pass-error" style="color:#b23b4a;font-size:13px;display:none;margin-top:10px;">الباسورد غلط، جرّبي تاني.</p>
+      </div>
+
+      <div id="sales-content-screen" hidden>
+        <h3>عرض سكن — أكتوبر 2026</h3>
+        <p class="sales-note">تشطيب + فرش + أجهزة بالقسط بدون فوايد. العرض ساري لفترة محدودة خلال شهر أكتوبر 2026. كل عرض لوحده: عمولة السيلز، وعمولة البروكر، وخصم العميل — مفيش دمج بينهم.</p>
+
+        <h4>باقات سكن وطريقة الدفع</h4>
+        <table class="sales-table">
+          <tr><th>المساحة</th><th>تشطيب</th><th>فرش</th><th>أجهزة</th><th>الباقة الكاملة</th><th>مقدم الكاملة 10%</th><th>القسط كل 3 شهور</th></tr>
+          <tr><td>30 متر</td><td>230,000</td><td>150,000</td><td>135,000</td><td>515,000</td><td>51,500</td><td>115,875</td></tr>
+          <tr><td>60 متر</td><td>390,000</td><td>225,000</td><td>175,000</td><td>790,000</td><td>79,000</td><td>177,750</td></tr>
+          <tr><td>82 متر</td><td>510,000</td><td>270,000</td><td>200,000</td><td>980,000</td><td>98,000</td><td>220,500</td></tr>
+          <tr><td>90 متر</td><td>550,000</td><td>270,000</td><td>200,000</td><td>1,020,000</td><td>102,000</td><td>229,500</td></tr>
+        </table>
+        <p class="sales-note">باقة منفصلة (تشطيب فقط / فرش فقط): مقدم 25% والباقي أقساط بدون فوايد على 9 شهور.<br>الباقة الكاملة: مقدم 10% والباقي 4 أقساط بدون فوايد، قسط كل 3 شهور (على سنة).</p>
+
+        <h4>عمولة السيلز</h4>
+        <p class="sales-note">أي وحدة تبيعها (تشطيب أو فرش أو أجهزة أو باقة كاملة) تتحسب بيعة، وكل ما عدد الوحدات يزيد النسبة بتزيد. الشرط: الوحدة تكون من غير خصم للعميل ومن غير بروكر.</p>
+        <table class="sales-table">
+          <tr><th>عدد الوحدات</th><th>وحدة</th><th>وحدتين</th><th>3 وحدات</th><th>5 وحدات</th><th>10 وحدات</th></tr>
+          <tr><td>العمولة</td><td>2.5%</td><td>3%</td><td>4%</td><td>5%</td><td>6%</td></tr>
+          <tr><td>على كل 100,000 جنيه</td><td>2,500</td><td>3,000</td><td>4,000</td><td>5,000</td><td>6,000</td></tr>
+        </table>
+        <p class="sales-note">عمولة البروكر ثابتة دايمًا 3% على الوحدة.</p>
+
+        <h4>عرض "يالا سوا" للعميل</h4>
+        <p class="sales-note">عمولة السيلز 2.5% بس على الوحدة، لكن العدد كبير (Bulk) فالمبلغ بيبقى كويس. العرض ساري فقط على العمارات دي داخل بورتو جولف: 121 – 123 – 124 – 128 – 129 – 136 – 137. أي عمارة تانية مش داخلة في العرض وكل الأسعار بترجع لأصلها من غير أي خصومات قديمة.</p>
+        <table class="sales-table">
+          <tr><th>عدد وحدات العميل</th><th>وحدة</th><th>وحدتين</th><th>3 وحدات</th><th>5 وحدات</th><th>10 وحدات</th></tr>
+          <tr><td>الخصم على كل وحدة</td><td>0%</td><td>5%</td><td>6%</td><td>8%</td><td>10%</td></tr>
+          <tr><td>على كل 100,000 جنيه</td><td>0</td><td>5,000</td><td>6,000</td><td>8,000</td><td>10,000</td></tr>
+        </table>
+
+        <p class="sales-note" style="margin-top:18px;">تاريخ العرض: 8/10/2026 — إحدى شركات التركي جروب.</p>
+      </div>
+    </div>
+  </div>
 
 </div>
 
@@ -686,5 +770,40 @@
       resultEl.scrollIntoView({behavior:'smooth', block:'nearest'});
     });
   }
+
+  var SALES_PASSWORD = 'Sakan#123';
+  var salesBtn = document.getElementById('sales-info-btn');
+  var salesOverlay = document.getElementById('sales-modal-overlay');
+  var salesClose = document.getElementById('sales-modal-close');
+  var salesPassScreen = document.getElementById('sales-pass-screen');
+  var salesContentScreen = document.getElementById('sales-content-screen');
+  var salesPassInput = document.getElementById('sales-pass-input');
+  var salesPassSubmit = document.getElementById('sales-pass-submit');
+  var salesPassError = document.getElementById('sales-pass-error');
+
+  function openSalesModal(){
+    salesOverlay.hidden = false;
+  }
+  function closeSalesModal(){
+    salesOverlay.hidden = true;
+  }
+  function checkSalesPass(){
+    if(salesPassInput.value === SALES_PASSWORD){
+      salesPassScreen.hidden = true;
+      salesContentScreen.hidden = false;
+      salesPassError.style.display = 'none';
+    } else {
+      salesPassError.style.display = 'block';
+    }
+  }
+  if(salesBtn) salesBtn.addEventListener('click', openSalesModal);
+  if(salesClose) salesClose.addEventListener('click', closeSalesModal);
+  if(salesPassSubmit) salesPassSubmit.addEventListener('click', checkSalesPass);
+  if(salesPassInput) salesPassInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter') checkSalesPass();
+  });
+  if(salesOverlay) salesOverlay.addEventListener('click', function(e){
+    if(e.target === salesOverlay) closeSalesModal();
+  });
 })();
 </script>
