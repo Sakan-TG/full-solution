@@ -293,6 +293,11 @@
   .sales-table th,.sales-table td{border:1px solid var(--line);padding:8px 8px;text-align:center;}
   .sales-table th{background:var(--surface-2);font-family:'Cairo',sans-serif;font-weight:800;color:var(--maroon);}
   .sales-note{background:var(--surface-2);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--ink-soft);margin:8px 0 12px;}
+  .yalla-size-result{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px;}
+  .yalla-size-result:last-child{margin-bottom:0;}
+  .yalla-size-title{font-family:'Cairo',sans-serif;font-weight:800;color:var(--maroon);font-size:14px;margin-bottom:6px;}
+  .yalla-size-result p{margin:0 0 5px;font-size:13px;}
+  .yalla-size-result p:last-child{margin:6px 0 0;padding-top:8px;border-top:1px solid var(--line-soft,var(--line));}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -422,7 +427,7 @@
     <div class="compare-grid">
       <div class="pkg" id="finishing-only">
         <div class="size">اختيار <b>تشطيب فقط</b></div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">240,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">410,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">535,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">575,000</div></div></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">230,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">390,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">510,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">550,000</div></div></div>
         <div class="installment">نظام السداد: <b>25% مقدم</b> والباقي على <b>3 دفعات كل 3 شهور</b> (خلال 9 شهور)</div>
         <ul>
           <li>عزل، كهرباء، صحي، سيراميك، نجارة، جيبسيوم بورد، دهانات، رخام وألوميتال</li>
@@ -442,7 +447,7 @@
       </div>
       <div class="pkg" id="furniture-only">
         <div class="size">اختيار <b>فرش فقط</b></div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">165,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">240,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">285,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">285,000</div></div></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">150,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">225,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">270,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">270,000</div></div></div>
         <div class="installment">نظام السداد: <b>25% مقدم</b> والباقي على <b>3 دفعات كل 3 شهور</b> (خلال 9 شهور)</div>
         <ul>
           <li>غرفة نوم رئيسية، غرفة نوم إضافية، ركنة معيشة، وحدة تلفزيون، سفرة، ومطبخ بالكامل</li>
@@ -470,14 +475,14 @@
       <div class="section-head">
         <span class="eyebrow">الباقة الكاملة</span>
         <h2>استلام على المفتاح — اختار المساحة اللي تناسبك</h2>
-        <p>سعر واحد شامل تشطيب + فرش متكامل (توريد وتركيب ونقل بالكامل) + أجهزة كهربائية، بدون أي تكاليف مخفية. التقسيط بدون فوايد على 8 دفعات على مدار سنة، بعد مقدم 10% عند التعاقد.</p>
+        <p>سعر واحد شامل تشطيب + فرش متكامل (توريد وتركيب ونقل بالكامل) + أجهزة كهربائية، بدون أي تكاليف مخفية. التقسيط بدون فوايد على 4 دفعات كل 3 شهور على مدار سنة، بعد مقدم 10% عند التعاقد.</p>
       </div>
       <div class="pkg-grid">
 
         <div class="pkg">
           <div class="size">مساحة <b>30 م²</b></div>
-          <div class="price">520,000<span> جنيه</span></div>
-          <div class="installment">مقدم 10%: <b>52,000</b> جنيه — ثم 8 دفعات × <b>58,500</b> جنيه</div>
+          <div class="price">515,000<span> جنيه</span></div>
+          <div class="installment">مقدم 10%: <b>51,500</b> جنيه — ثم 4 دفعات × <b>115,875</b> جنيه</div>
           <ul>
             <li>غرفة نوم رئيسية + ركنة معيشة + مطبخ Premium</li>
             <li>51 قطعة فرش وأجهزة مسجّلة بالكامل</li>
@@ -492,8 +497,8 @@
         <div class="pkg feat">
           <span class="ribbon">الأكتر طلباً</span>
           <div class="size">مساحة <b>60 م²</b></div>
-          <div class="price">800,000<span> جنيه</span></div>
-          <div class="installment">مقدم 10%: <b>80,000</b> جنيه — ثم 8 دفعات × <b>90,000</b> جنيه</div>
+          <div class="price">790,000<span> جنيه</span></div>
+          <div class="installment">مقدم 10%: <b>79,000</b> جنيه — ثم 4 دفعات × <b>177,750</b> جنيه</div>
           <ul>
             <li>غرفة نوم رئيسية + غرفة إضافية + ركنة معيشة</li>
             <li>64 قطعة فرش وأجهزة — إمكانية تعديل لـ2 غرفة نوم وحمام واحد</li>
@@ -507,8 +512,8 @@
 
         <div class="pkg">
           <div class="size">مساحة <b>82 م²</b></div>
-          <div class="price">950,000<span> جنيه</span></div>
-          <div class="installment">مقدم 10%: <b>95,000</b> جنيه — ثم 8 دفعات × <b>106,875</b> جنيه</div>
+          <div class="price">980,000<span> جنيه</span></div>
+          <div class="installment">مقدم 10%: <b>98,000</b> جنيه — ثم 4 دفعات × <b>220,500</b> جنيه</div>
           <ul>
             <li>غرفتين نوم + حمامين + غرفة سفرة مستقلة</li>
             <li>76 قطعة فرش وأجهزة</li>
@@ -522,8 +527,8 @@
 
         <div class="pkg">
           <div class="size">مساحة <b>90 م²</b></div>
-          <div class="price">990,000<span> جنيه</span></div>
-          <div class="installment">مقدم 10%: <b>99,000</b> جنيه — ثم 8 دفعات × <b>111,375</b> جنيه</div>
+          <div class="price">1,020,000<span> جنيه</span></div>
+          <div class="installment">مقدم 10%: <b>102,000</b> جنيه — ثم 4 دفعات × <b>229,500</b> جنيه</div>
           <ul>
             <li>غرفتين نوم + حمامين + غرفة سفرة مستقلة</li>
             <li>76 قطعة فرش وأجهزة — أوسع مساحة في الباقات</li>
@@ -709,6 +714,42 @@
           <tr><td>على كل 100,000 جنيه</td><td>0</td><td>5,000</td><td>6,000</td><td>8,000</td><td>10,000</td></tr>
         </table>
 
+        <div class="yalla-calc" style="background:var(--surface-2);border-radius:14px;padding:14px 16px;margin:4px 0 16px;">
+          <h4 style="margin:0 0 10px;">حاسبة "يالا سوا" — السعر بعد الخصم</h4>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-bottom:10px;">
+            <div style="flex:1;min-width:140px;">
+              <label style="font-size:12px;color:var(--ink-soft);display:block;margin-bottom:4px;">نوع الباقة</label>
+              <select id="yalla-package" style="width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--line);font-family:'Tajawal',sans-serif;font-size:13px;background:var(--surface);color:var(--ink);">
+                <option value="finishing">تشطيب فقط</option>
+                <option value="furniture">فرش فقط</option>
+                <option value="furniture_appliances">فرش وأجهزة</option>
+                <option value="full" selected>الباقة الكاملة</option>
+              </select>
+            </div>
+            <div style="flex:1;min-width:140px;">
+              <label style="font-size:12px;color:var(--ink-soft);display:block;margin-bottom:4px;">عدد وحدات العميل (لتحديد نسبة الخصم)</label>
+              <select id="yalla-units" style="width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--line);font-family:'Tajawal',sans-serif;font-size:13px;background:var(--surface);color:var(--ink);">
+                <option value="1">وحدة</option>
+                <option value="2">وحدتين</option>
+                <option value="3">3 وحدات</option>
+                <option value="5">5 وحدات</option>
+                <option value="10">10 وحدات</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:10px;">
+            <label style="font-size:12px;color:var(--ink-soft);display:block;margin-bottom:6px;">المساحات (تقدر تختار أكتر من مساحة)</label>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <label style="display:flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;"><input type="checkbox" class="yalla-size-cb" value="30" checked style="margin:0;"> 30 م²</label>
+              <label style="display:flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;"><input type="checkbox" class="yalla-size-cb" value="60" style="margin:0;"> 60 م²</label>
+              <label style="display:flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;"><input type="checkbox" class="yalla-size-cb" value="82" style="margin:0;"> 82 م²</label>
+              <label style="display:flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;"><input type="checkbox" class="yalla-size-cb" value="90" style="margin:0;"> 90 م²</label>
+            </div>
+          </div>
+          <button type="button" id="yalla-calc-btn" class="btn btn-navy" style="padding:10px 18px;font-size:13px;">احسب</button>
+          <div id="yalla-result" style="display:none;margin-top:12px;"></div>
+        </div>
+
         <p class="sales-note" style="margin-top:18px;">تاريخ العرض: 8/10/2026 — إحدى شركات التركي جروب.</p>
       </div>
     </div>
@@ -731,9 +772,9 @@
   });
 
   var CALC_PRICES = {
-    finishing: {30:240000, 60:410000, 82:535000, 90:575000},
-    furniture: {30:165000, 60:240000, 82:285000, 90:285000},
-    full:      {30:520000, 60:800000, 82:950000, 90:990000}
+    finishing: {30:230000, 60:390000, 82:510000, 90:550000},
+    furniture: {30:150000, 60:225000, 82:270000, 90:270000},
+    full:      {30:515000, 60:790000, 82:980000, 90:1020000}
   };
   var CALC_LABELS = {finishing:'تشطيب فقط', furniture:'فرش فقط', full:'الباقة الكاملة'};
 
@@ -746,8 +787,8 @@
     if(option === 'full'){
       down = Math.round(price * 0.10);
       rest = price - down;
-      inst = Math.round(rest / 8);
-      return 'مقدم <b>10%</b> (<b>' + calcFmt(down) + '</b> جنيه) عند التعاقد، والباقي على <b>8 دفعات متساوية</b> × <b>' + calcFmt(inst) + '</b> جنيه على مدار 12 شهر.';
+      inst = Math.round(rest / 4);
+      return 'مقدم <b>10%</b> (<b>' + calcFmt(down) + '</b> جنيه) عند التعاقد، والباقي على <b>4 دفعات متساوية</b> × <b>' + calcFmt(inst) + '</b> جنيه كل 3 شهور (على مدار سنة).';
     }
     down = Math.round(price * 0.25);
     rest = price - down;
@@ -805,5 +846,55 @@
   if(salesOverlay) salesOverlay.addEventListener('click', function(e){
     if(e.target === salesOverlay) closeSalesModal();
   });
+
+  var YALLA_DISCOUNT = {1:0, 2:5, 3:6, 5:8, 10:10};
+  var YALLA_PRICES = {
+    finishing: CALC_PRICES.finishing,
+    furniture: CALC_PRICES.furniture,
+    furniture_appliances: {30:285000, 60:400000, 82:470000, 90:470000},
+    full: CALC_PRICES.full
+  };
+  var YALLA_LABELS = {finishing:'تشطيب فقط', furniture:'فرش فقط', furniture_appliances:'فرش وأجهزة', full:'الباقة الكاملة'};
+
+  function yallaPlan(pkgType, price){
+    var downPct = (pkgType === 'full') ? 10 : 25;
+    var instCount = (pkgType === 'full') ? 4 : 3;
+    var down = Math.round(price * downPct / 100);
+    var inst = Math.round((price - down) / instCount);
+    return {downPct: downPct, down: down, instCount: instCount, inst: inst};
+  }
+
+  var yallaBtn = document.getElementById('yalla-calc-btn');
+  if(yallaBtn){
+    yallaBtn.addEventListener('click', function(){
+      var pkgType = document.getElementById('yalla-package').value;
+      var units = parseInt(document.getElementById('yalla-units').value, 10);
+      var discountPct = YALLA_DISCOUNT[units];
+      var sizeCbs = document.querySelectorAll('.yalla-size-cb:checked');
+      var resultEl = document.getElementById('yalla-result');
+      if(sizeCbs.length === 0){
+        resultEl.innerHTML = '<p style="color:#b23b4a;font-size:13px;margin:0;">اختاري مساحة واحدة على الأقل.</p>';
+        resultEl.style.display = 'block';
+        return;
+      }
+      var html = '';
+      sizeCbs.forEach(function(cb){
+        var size = cb.value;
+        var basePrice = YALLA_PRICES[pkgType][size];
+        var discountAmt = Math.round(basePrice * discountPct / 100);
+        var finalPrice = basePrice - discountAmt;
+        var plan = yallaPlan(pkgType, finalPrice);
+        html += '<div class="yalla-size-result">'
+          + '<div class="yalla-size-title">' + YALLA_LABELS[pkgType] + ' — ' + size + ' م²</div>'
+          + '<p>السعر الأصلي: <b>' + calcFmt(basePrice) + '</b> جنيه</p>'
+          + '<p>خصم "يالا سوا" لعدد ' + units + ' وحدة: <b>' + discountPct + '%</b> (' + calcFmt(discountAmt) + ' جنيه)</p>'
+          + '<p>السعر بعد الخصم: <b style="color:var(--maroon);">' + calcFmt(finalPrice) + '</b> جنيه</p>'
+          + '<p>مقدم ' + plan.downPct + '%: <b>' + calcFmt(plan.down) + '</b> جنيه — ثم ' + plan.instCount + ' دفعات × <b>' + calcFmt(plan.inst) + '</b> جنيه كل 3 شهور</p>'
+          + '</div>';
+      });
+      resultEl.innerHTML = html;
+      resultEl.style.display = 'block';
+    });
+  }
 })();
 </script>
