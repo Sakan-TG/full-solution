@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light">
 
 <title>Sakan TG</title>
 <style>
@@ -9,39 +9,13 @@
     --ink:#3D2F2F;
     --ink-soft:#7A6660;
     --maroon:#6B2737;
-    --maroon-ink:#3D2F2F;
+    --maroon-ink:#4E1D29;
+    --maroon-dark:#4E1D29;
+    color-scheme: light;
     --taupe:#B5A49A;
     --line:#E4D6C8;
     --line-soft:#EEE4D8;
     --shadow: 0 18px 40px -22px rgba(107,39,55,.28);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#241A1B;
-      --surface:#2E2223;
-      --surface-2:#38292A;
-      --ink:#F3EAE3;
-      --ink-soft:#C9B7AE;
-      --maroon:#E48A98;
-      --maroon-ink:#1C1415;
-      --taupe:#C9AE9C;
-      --line:#4A3838;
-      --line-soft:#3A2C2C;
-      --shadow: 0 18px 40px -22px rgba(0,0,0,.6);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#241A1B;
-    --surface:#2E2223;
-    --surface-2:#38292A;
-    --ink:#F3EAE3;
-    --ink-soft:#C9B7AE;
-    --maroon:#E48A98;
-    --maroon-ink:#1C1415;
-    --taupe:#C9AE9C;
-    --line:#4A3838;
-    --line-soft:#3A2C2C;
-    --shadow: 0 18px 40px -22px rgba(0,0,0,.6);
   }
 
   *{box-sizing:border-box;}
@@ -67,6 +41,8 @@
     color:var(--maroon);text-transform:uppercase;
   }
   .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--maroon);display:inline-block;}
+  .hero .eyebrow{color:#E9CDD3;}
+  .hero .eyebrow::before{background:#E9CDD3;}
   section{padding-block:64px;}
   .band{background:var(--surface-2);}
   .btn{
@@ -89,7 +65,7 @@
   .hero{
     position:relative;
     padding-block:0;
-    background:var(--maroon-ink, var(--maroon));
+    background:linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
     color:#F4EFE3;
     overflow:hidden;
   }
@@ -119,7 +95,7 @@
   .hero-media img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;}
   .hero-media .tag{
     position:absolute;inset-inline-start:18px;bottom:18px;
-    background:rgba(18,24,31,.72);backdrop-filter:blur(6px);
+    background:rgba(78,29,41,.80);backdrop-filter:blur(6px);
     color:#FEFCF9;font-size:12.5px;padding:9px 14px;border-radius:10px;
     font-family:'Cairo',sans-serif;font-weight:700;
   }
@@ -158,7 +134,7 @@
   /* ---------- VIDEOS ---------- */
   .videos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
   .video-card{
-    background:var(--maroon-ink, var(--maroon));color:#F4EFE3;border-radius:16px;
+    background:linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);color:#F4EFE3;border-radius:16px;
     padding:22px;display:flex;flex-direction:column;gap:14px;min-height:150px;
     justify-content:space-between;transition:transform .15s ease;
   }
@@ -225,7 +201,7 @@
 
   /* ---------- CLOSING BANNER ---------- */
   .closing{
-    background:var(--maroon-ink, var(--maroon));color:#F4EFE3;border-radius:24px;
+    background:linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);color:#F4EFE3;border-radius:24px;
     padding:44px 34px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;
     position:relative;overflow:hidden;
   }
@@ -305,6 +281,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head><body>
 
 <div dir="rtl" lang="ar">
 
@@ -330,7 +307,7 @@
         <div class="trust-strip">
           <div class="t"><b>4 مساحات</b>30 / 60 / 82 / 90 م²</div>
           <div class="t"><b>سعر واحد</b>بدون تكاليف مخفية</div>
-          <div class="t"><b>تقسيط 8 دفعات</b>بدون فوايد</div>
+          <div class="t"><b>مقدم 10% + 4 دفعات</b>بدون فوايد</div>
           <div class="t"><b>بورتو جولف</b>تسليم وتنفيذ</div>
         </div>
       </div>
@@ -429,7 +406,7 @@
     <div class="compare-grid">
       <div class="pkg" id="finishing-only">
         <div class="size">اختيار <b>تشطيب فقط</b></div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">230,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">390,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">510,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">550,000</div></div></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">240,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">410,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">535,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">575,000</div></div></div>
         <div class="installment">نظام السداد: <b>25% مقدم</b> والباقي على <b>3 دفعات كل 3 شهور</b> (خلال 9 شهور)</div>
         <ul>
           <li>عزل، كهرباء، صحي، سيراميك، نجارة، جيبسيوم بورد، دهانات، رخام وألوميتال</li>
@@ -449,7 +426,7 @@
       </div>
       <div class="pkg" id="furniture-only">
         <div class="size">اختيار <b>فرش فقط</b></div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">150,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">225,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">270,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">270,000</div></div></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-block:4px 2px;"><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">30 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">165,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">60 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">240,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">82 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">285,000</div></div><div style="background:var(--surface-2);border-radius:10px;padding:8px 10px;text-align:center;"><div style="font-size:11.5px;color:var(--ink-soft);">90 م²</div><div style="font-family:'Cairo',sans-serif;font-weight:800;font-size:15px;color:var(--maroon);">285,000</div></div></div>
         <div class="installment">نظام السداد: <b>25% مقدم</b> والباقي على <b>3 دفعات كل 3 شهور</b> (خلال 9 شهور)</div>
         <ul>
           <li>غرفة نوم رئيسية، غرفة نوم إضافية، ركنة معيشة، وحدة تلفزيون، سفرة، ومطبخ بالكامل</li>
@@ -691,21 +668,21 @@
       </div>
 
       <div id="sales-content-screen" hidden>
-        <h3>عرض سكن — أكتوبر 2026</h3>
-        <p class="sales-note">تشطيب + فرش + أجهزة بالقسط بدون فوايد. العرض ساري لفترة محدودة خلال شهر أكتوبر 2026. كل عرض لوحده: عمولة السيلز، وعمولة البروكر، وخصم العميل — مفيش دمج بينهم.</p>
+        <h3>تسعير سكن المعتمد — من 30 أكتوبر 2026</h3>
+        <p class="sales-note">تشطيب + فرش + أجهزة بالقسط بدون فوايد. عروض أكتوبر انتهت رسميًا — الأسعار دي هي المعتمدة في كل العروض والتعاملات، وممنوع استخدام أي أسعار قديمة. كل حاجة لوحدها: عمولة السيلز، وعمولة البروكر، وخصم العميل — مفيش دمج بينهم.</p>
 
         <h4>باقات سكن وطريقة الدفع</h4>
         <table class="sales-table">
           <tr><th>المساحة</th><th>تشطيب</th><th>فرش</th><th>أجهزة</th><th>الباقة الكاملة</th><th>مقدم الكاملة 10%</th><th>القسط كل 3 شهور</th></tr>
           <tr><td>30 متر</td><td>240,000</td><td>165,000</td><td>145,000</td><td>550,000</td><td>55,000</td><td>123,750</td></tr>
-          <tr><td>47 متر (غرفة واحدة)</td><td>329,000</td><td>200,000</td><td>185,000</td><td>714,000</td><td>71,400</td><td>160,650</td></tr>
+          <tr><td>47 متر (غرفة واحدة)</td><td>329,000</td><td>215,000</td><td>185,000</td><td>729,000</td><td>72,900</td><td>164,025</td></tr>
           <tr><td>52 متر (غرفة واحدة)</td><td>364,000</td><td>200,000</td><td>185,000</td><td>749,000</td><td>74,900</td><td>168,525</td></tr>
-          <tr><td>60 متر</td><td>390,000</td><td>225,000</td><td>175,000</td><td>790,000</td><td>79,000</td><td>177,750</td></tr>
-          <tr><td>82 متر</td><td>510,000</td><td>270,000</td><td>200,000</td><td>980,000</td><td>98,000</td><td>220,500</td></tr>
-          <tr><td>90 متر</td><td>550,000</td><td>270,000</td><td>200,000</td><td>1,020,000</td><td>102,000</td><td>229,500</td></tr>
+          <tr><td>60 متر</td><td>410,000</td><td>240,000</td><td>185,000</td><td>835,000</td><td>83,500</td><td>187,875</td></tr>
+          <tr><td>82 متر</td><td>535,000</td><td>285,000</td><td>210,000</td><td>1,030,000</td><td>103,000</td><td>231,750</td></tr>
+          <tr><td>90 متر</td><td>575,000</td><td>285,000</td><td>210,000</td><td>1,070,000</td><td>107,000</td><td>240,750</td></tr>
         </table>
-        <p class="sales-note" style="color:#b23b4a;"><b>⚠️ ملاحظة:</b> صفوف 60 و82 و90 متر لسه بالتسعير القديم. الإجمالي الجديد المعتمد هو 835,000 / 1,030,000 / 1,070,000 جنيه على التوالي (محدّث في الكروت فوق)، لكن تفصيل التشطيب/الفرش/الأجهزة لكل مساحة محتاج يتبعت علشان الجدول ده يكتمل بالتسعير الجديد بالكامل.</p>
-        <p class="sales-note">المساحات اللي فيها غرفة نوم واحدة (زي 47 و52 متر وأي مساحة شبههم): سعر متر التشطيب بيتحسب <b>7,000 جنيه/م²</b> (مش سعر ثابت زي باقي المساحات)، والفرش بيبقى <b>200,000</b> جنيه والأجهزة <b>185,000</b> جنيه.</p>
+        
+        <p class="sales-note">المساحات اللي فيها غرفة نوم واحدة (زي 47 و52 متر وأي مساحة شبههم): سعر متر التشطيب بيتحسب <b>7,000 جنيه/م²</b> (مش سعر ثابت زي باقي المساحات)، والفرش بيبقى <b>215,000</b> جنيه لمساحة 47 متر (و<b>200,000</b> جنيه لمساحة 52 متر)، والأجهزة <b>185,000</b> جنيه.</p>
         <p class="sales-note">تعديل غرفتين نوم لـ3 غرف (82 و90 متر بس): زيادة <b>50,000</b> جنيه على باقة التشطيب لوحدها، أو <b>120,000</b> جنيه على الباقة الكاملة.</p>
         <p class="sales-note">باقة منفصلة (تشطيب فقط / فرش فقط): مقدم 25% والباقي أقساط بدون فوايد على 9 شهور.<br>الباقة الكاملة: مقدم 10% والباقي 4 أقساط بدون فوايد، قسط كل 3 شهور (على سنة).</p>
 
@@ -793,8 +770,8 @@
   });
 
   var CALC_PRICES = {
-    finishing: {30:230000, 60:390000, 82:510000, 90:550000},
-    furniture: {30:150000, 60:225000, 82:270000, 90:270000},
+    finishing: {30:240000, 60:410000, 82:535000, 90:575000},
+    furniture: {30:165000, 60:240000, 82:285000, 90:285000},
     full:      {30:550000, 60:835000, 82:1030000, 90:1070000}
   };
   var CALC_LABELS = {finishing:'تشطيب فقط', furniture:'فرش فقط', full:'الباقة الكاملة'};
@@ -872,7 +849,7 @@
   var YALLA_PRICES = {
     finishing: CALC_PRICES.finishing,
     furniture: CALC_PRICES.furniture,
-    furniture_appliances: {30:285000, 60:400000, 82:470000, 90:470000},
+    furniture_appliances: {30:310000, 60:425000, 82:495000, 90:495000},
     full: CALC_PRICES.full
   };
   var YALLA_LABELS = {finishing:'تشطيب فقط', furniture:'فرش فقط', furniture_appliances:'فرش وأجهزة', full:'الباقة الكاملة'};
@@ -919,6 +896,4 @@
   }
 })();
 </script>
-
-
 </body></html>
